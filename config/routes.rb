@@ -9,25 +9,15 @@
 #           PATCH  /users/:id(.:format)      users#update
 #           PUT    /users/:id(.:format)      users#update
 #           DELETE /users/:id(.:format)      users#destroy
+#      root GET    /                         users#index
 #
 
 Rails.application.routes.draw do
 
-  get 'users/new'
+  resources :users
+  root to: "users#index"
+  get '/signup' => 'users#new'
 
-  root to: "home#index"
-
-  get 'users/index'
-
-  get 'users/new'
-
-  get 'users/edit'
-
-  get 'users/show'
-
-  get 'users/login'
-
-  resources :users, :only => [:new, :create]
 
 
 

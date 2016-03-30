@@ -1,4 +1,11 @@
 <div class="container">
   <h1>User Data and Graphs</h1>
-  
+  <p>Height (inches): <%= @current_user.measurements.pluck(:height).join(', ') %></p>
+  <p>Weight: <%= @current_user.measurements.pluck(:weight).join(', ') %></p>
+  <p>Waist: <%= @current_user.measurements.pluck(:waist).join(',') %></p>
+  <p>Thighs: <%= @current_user.measurements.pluck(:thighs).join(',') %></p>
+  <p>Stomach: <%= @current_user.measurements.pluck(:stomach).join(',') %> </p>
+  <p>Hips: <%= @current_user.measurements.pluck(:hips).join(',') %> </p>
+  <p>Upper Arm Right: <%= @current_user.measurements.pluck(:upper_arm_right).join(',') %> </p>
+  <p>Upper Arm Left: <%= @current_user.measurements.pluck(:upper_arm_left).join(',') %> </p>
 </div>

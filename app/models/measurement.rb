@@ -12,8 +12,9 @@
 #  hips            :text
 #  upper_arm_right :text
 #  upper_arm_left  :text
+#  user_id         :integer
 #
 
 class Measurement < ActiveRecord::Base
-
+  belongs_to :user
 end

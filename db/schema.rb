@@ -11,28 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329032743) do
+ActiveRecord::Schema.define(version: 20160329235418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "measurements", force: :cascade do |t|
-    t.text "height"
-    t.text "weight"
-    t.text "waist"
-    t.text "chest"
-    t.text "thighs"
-    t.text "stomach"
-    t.text "hips"
-    t.text "upper_arm_right"
-    t.text "upper_arm_left"
+    t.text    "height"
+    t.text    "weight"
+    t.text    "waist"
+    t.text    "chest"
+    t.text    "thighs"
+    t.text    "stomach"
+    t.text    "hips"
+    t.text    "upper_arm_right"
+    t.text    "upper_arm_left"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.text     "email"
     t.text     "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.datetime "dob"
+    t.string   "gender"
+    t.boolean  "admin",           default: false
+    t.text     "image"
   end
 
 end

@@ -41,7 +41,9 @@ class UsersController < ApplicationController
   end
 
   def index
-    if @current_user
+    if @current_user.present? && @current_user.measurements.empty?
+      redirect_to new_user_measurement_path(@current_user)
+    elsif @current_user.present?
       redirect_to users_dashboard_path
     end
   end

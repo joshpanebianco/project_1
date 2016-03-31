@@ -1,7 +1,53 @@
+<script language="javascript">
+
+// Get the context of the canvas element we want to select
+//var ctx = document.getElementById("myChart").getContext("2d");
+$(function(){
+
+var weight_canvas = $("#myChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var weight_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "Weight",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:weight).join(', ') %> ]
+        }
+    ]
+};
+var weight_chart = new Chart(weight_canvas).Line(weight_data);
+
+
+});
+</script>
+
+<!-- <canvas id="myChart" width="600" height="400"></canvas> -->
+
+
 <div class="container">
-  <h1>User Data and Graphs</h1>
-  <p>Height (inches): <%= @current_user.measurements.pluck(:height).join(', ') %></p>
+  <h1>Track Your Results</h1>
+
+
+  <canvas id="myChart" width="600" height="400"></canvas>
+
+  <p>Height (inches): <%= @current_user.height %></p>
+
   <p>Weight: <%= @current_user.measurements.pluck(:weight).join(', ') %></p>
+
   <p>Waist: <%= @current_user.measurements.pluck(:waist).join(',') %></p>
   <p>Thighs: <%= @current_user.measurements.pluck(:thighs).join(',') %></p>
   <p>Stomach: <%= @current_user.measurements.pluck(:stomach).join(',') %> </p>

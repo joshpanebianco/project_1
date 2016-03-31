@@ -4,7 +4,7 @@
 //var ctx = document.getElementById("myChart").getContext("2d");
 $(function(){
 
-var weight_canvas = $("#myChart").get(0).getContext("2d");
+var weight_canvas = $("#weightChart").get(0).getContext("2d");
 //var myNewChart = new Chart(ctx);
 
 
@@ -32,6 +32,185 @@ var weight_data = {
 var weight_chart = new Chart(weight_canvas).Line(weight_data);
 
 
+
+
+var waist_canvas = $("#waistChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var waist_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "Waist",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:waist).join(', ') %> ]
+        }
+    ]
+};
+var waist_chart = new Chart(waist_canvas).Line(waist_data);
+
+
+
+
+var thighs_canvas = $("#thighsChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var thighs_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "thighs",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:thighs).join(', ') %> ]
+        }
+    ]
+};
+var thighs_chart = new Chart(thighs_canvas).Line(thighs_data);
+
+
+
+
+var stomach_canvas = $("#stomachChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var stomach_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "stomach",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:stomach).join(', ') %> ]
+        }
+    ]
+};
+var stomach_chart = new Chart(stomach_canvas).Line(stomach_data);
+
+
+
+
+var hips_canvas = $("#hipsChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var hips_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "hips",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:hips).join(', ') %> ]
+        }
+    ]
+};
+var hips_chart = new Chart(hips_canvas).Line(hips_data);
+
+
+
+var upper_arm_right_canvas = $("#upper_arm_rightChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var upper_arm_right_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "upper_arm_right",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:upper_arm_right).join(', ') %> ]
+        }
+    ]
+};
+var upper_arm_right_chart = new Chart(upper_arm_right_canvas).Line(hips_data);
+
+
+
+
+var upper_arm_left_canvas = $("#upper_arm_leftChart").get(0).getContext("2d");
+//var myNewChart = new Chart(ctx);
+
+
+var upper_arm_left_data = {
+    labels: [
+    <% @current_user.measurements.each do |deets| %>
+      "<%= deets.created_at.strftime('%d %b') %>",
+    <% end %>
+  ],
+
+
+    datasets: [
+        {
+            label: "upper_arm_left",
+            fillColor: "rgba(0,255,0,0.2)", //"rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [ <%= @current_user.measurements.pluck(:upper_arm_left).join(', ') %> ]
+        }
+    ]
+};
+var upper_arm_left_chart = new Chart(upper_arm_left_canvas).Line(hips_data);
+
+
 });
 </script>
 
@@ -41,17 +220,26 @@ var weight_chart = new Chart(weight_canvas).Line(weight_data);
 <div class="container">
   <h1>Track Your Results</h1>
 
+  <h3>Weight</h3>
+  <canvas id="weightChart" width="600" height="400"></canvas>
 
-  <canvas id="myChart" width="600" height="400"></canvas>
+  <h3>Waist</h3>
+  <canvas id="waistChart" width="600" height="400"></canvas>
 
-  <p>Height (inches): <%= @current_user.height %></p>
+  <h3>Thighs</h3>
+  <canvas id="thighsChart" width="600" height="400"></canvas>
 
-  <p>Weight: <%= @current_user.measurements.pluck(:weight).join(', ') %></p>
+  <h3>Stomach</h3>
+  <canvas id="stomachChart" width="600" height="400"></canvas>
 
-  <p>Waist: <%= @current_user.measurements.pluck(:waist).join(',') %></p>
-  <p>Thighs: <%= @current_user.measurements.pluck(:thighs).join(',') %></p>
-  <p>Stomach: <%= @current_user.measurements.pluck(:stomach).join(',') %> </p>
-  <p>Hips: <%= @current_user.measurements.pluck(:hips).join(',') %> </p>
-  <p>Upper Arm Right: <%= @current_user.measurements.pluck(:upper_arm_right).join(',') %> </p>
-  <p>Upper Arm Left: <%= @current_user.measurements.pluck(:upper_arm_left).join(',') %> </p>
+  <h3>Hips</h3>
+  <canvas id="hipsChart" width="600" height="400"></canvas>
+
+  <h3>Upper Arm Right</h3>
+  <canvas id="upper_arm_rightChart" width="600" height="400"></canvas>
+
+  <h3>Upper Arm Left</h3>
+  <canvas id="upper_arm_leftChart" width="600" height="400"></canvas>
+
+
 </div>

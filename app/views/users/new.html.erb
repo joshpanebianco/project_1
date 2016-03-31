@@ -7,27 +7,35 @@
   </ol>
   <% end %>
 <h1>Sign Up</h1>
+  <div class="col-lg-6">
   <%= form_for @user do |f| %>
-
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-
+  <fieldset class="form-group">
+    <%= f.label :username %>
+    <%= f.text_field :username, :class => 'form-control', :placeholder => "Username"%>
+  </fieldset>
+  <fieldset class="form-group">
     <%= f.label :email %>
-    <%= f.email_field :email, :required => true %>
+    <%= f.text_field :email, :class => 'form-control', :placeholder => "Email"%>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :gender %>
+    <%= f.text_field :gender, :class => 'form-control', :placeholder => "gender"%>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :height %>
+    <%= f.text_field :height, :class => 'form-control', :placeholder => "Height"%>
+  </fieldset>
+  <fieldset class="form-group">
     <%= f.label :password %>
-    <%= f.password_field :password, :required => true %>
-
-
-            <%= f.label :height %>
-            <%= f.text_field :height %>
-
-            <%= f.label :gender %>
-            <%= f.text_field :gender %>
-
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, :required => true %>
-
-
-    <%= f.submit "signup" %>
+    <%= f.password_field :password, :class => 'form-control', :placeholder => "Password"%>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :password_confirmation, "Password Confirmation" %>
+    <%= f.password_field :password_confirmation, :class => 'form-control', :placeholder => "Password Confirmation"%>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.submit "Sign Up", :class => 'btn btn-success'%>
+  </fieldset>
   <% end %>
+
 </div>

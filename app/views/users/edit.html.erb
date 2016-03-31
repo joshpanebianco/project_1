@@ -1,22 +1,39 @@
 <!-- <h1>Users#edit</h1>
 <p>Find me in app/views/users/edit.html.erb</p> -->
 
-<h1>EDIT USER</h1>
+<div class="row">
+<div class="col-lg-6">
+<h1>Edit Your Details</h1>
 <%= form_for @user do |f| %>
+
+<fieldset class="form-group">
 <%= f.label :email %>
-<%= f.email_field :email %>
+<%= f.email_field :email, :class => 'form-control' %>
+</fieldset>
 
+<fieldset class="form-group">
 <%= f.label :password %>
-<%= f.password_field :password %>
+<%= f.password_field :password, :class => 'form-control' %>
+</fieldset>
 
+<fieldset class="form-group">
 <%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
+<%= f.password_field :password_confirmation, :class => 'form-control' %>
+</fieldset>
 
+<fieldset class="form-group">
 <%= f.label :image%>
-<%= f.url_field :image %>
+<%= f.url_field :image, :class => 'form-control' %>
+</fieldset>
 
-<%= f.submit %>
+<fieldset class="form-group">
+<%= f.submit "Update", :class => 'btn btn-success' %>
+</fieldset>
+
+
 <% end %>
+</div>
+</div>
 <!-- t.text "height"
 t.text "weight"
 t.text "waist"

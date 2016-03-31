@@ -6,85 +6,46 @@
   <div class="row">
     <div class="col-lg-6">
       <%= form_for([@user, @measurement]) do |f| %>
-
+        <fieldset class="form-group">
         <%= f.label :weight %>
-        <%= f.text_field :weight %>
+        <%= f.text_field :weight,:class => 'form-control'%>
+       </fieldset>
 
+       <fieldset class="form-group">
         <%= f.label :waist %>
-        <%= f.text_field :waist %>
+        <%= f.text_field :waist, :class => 'form-control' %>
+      </fieldset>
 
+      <fieldset class="form-group">
         <%= f.label :thighs %>
-        <%= f.text_field :thighs %>
+        <%= f.text_field :thighs, :class => 'form-control' %>
+      </fieldset>
 
+      <fieldset class="form-group">
         <%= f.label :stomach %>
-        <%= f.text_field :stomach %>
+        <%= f.text_field :stomach, :class => 'form-control' %>
+      </fieldset>
 
+      <fieldset class="form-group">
         <%= f.label :hips %>
-        <%= f.text_field :hips %>
+        <%= f.text_field :hips, :class => 'form-control' %>
+      </fieldset>
 
+      <fieldset class="form-group">
         <%= f.label :upper_arm_right %>
-        <%= f.text_field :upper_arm_right %>
+        <%= f.text_field :upper_arm_right, :class => 'form-control' %>
+      </fieldset>
 
+      <fieldset class="form-group">
         <%= f.label :upper_arm_left %>
-        <%= f.text_field :upper_arm_left %>
+        <%= f.text_field :upper_arm_left, :class => 'form-control' %>
+      </fieldset>
 
-        <%= f.submit "signup" %>
+      <fieldset class="form-group">
+        <%= f.submit "Submit", :class => 'btn btn-success' %>
+      <fieldset>
 
       <%end %>
     </div>
   </div>
 </div>
-
-
-
-<!--
-
-
-      <form>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput">Height</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Height">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput2">Weight</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Weight">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput3">Waist</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Waist">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput4">Thighs</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Thighs">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput5">Stomach</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Waist">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput6">Hips</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Thighs">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput7">Stomach</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Waist">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput8">Hips</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Thighs">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput7">Upper Arm Right</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Upper Arm Right">
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="formGroupExampleInput8">Upper Arm Left</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Upper Arm Left">
-        </fieldset>
-        <fieldset class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
-</div> -->

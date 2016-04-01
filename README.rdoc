@@ -1,28 +1,13 @@
-== README
+== Fitness Tracking App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application gives the user the ability to track the results of a fitness program over time. 
 
-Things you may want to cover:
+The user data is then visualized in a graph that changes as the user enters new data.
 
-* Ruby version
+To create the create the Charts I used Charts.js.
 
-* System dependencies
+The front end was created in Bootstrap.
 
-* Configuration
+I hope to add move functions like a section of the site that records your food and a summary section that tells you how much progress you have made over time.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Thank you for the team at GA Sydney for all your help getting this app up and running.

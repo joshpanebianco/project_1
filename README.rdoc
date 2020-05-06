@@ -4,7 +4,7 @@ This application gives the user the ability to track the results of a fitness pr
 
 The user data is then visualized in a graph that changes as the user enters new data.
 
-To create the create the Charts I used Charts.js.
+The Charts are built with Charts.js.
 
 The front end was created in Bootstrap.
 
